@@ -55,6 +55,14 @@ class Date
         -Float::INFINITY
       end
     end
+    
+    def first_of_month
+      Date.new(year, month, 1)
+    end
+    
+    def last_of_month
+      next_month.first_of_month.prev_day
+    end
 
   end
 
